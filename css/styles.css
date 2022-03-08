@@ -8,11 +8,19 @@ html {
   --color-paragraphs: #69696a;
   --nav-padding: 1.5rem;
 }
-
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: rebeccapurple;
+}
+ul {
+  padding-inline-start: 0;
+}
 .container {
   background-color: var(--color-container);
   margin: 2rem 2rem 0 2rem;
   border-radius: 10px;
+  padding: 5rem 15rem 5rem 15rem;
 }
 .nav__toggler {
   padding: var(--nav-padding);
@@ -61,11 +69,12 @@ p em {
 }
 input {
   border: 0.5px solid rgb(211, 211, 211);
-  width: 100%;
+  width: 90%;
   padding: 1.4rem 0 1.4rem 1.4rem;
   outline: none;
   border-radius: 5px;
   margin: 1rem;
+  overflow: hidden;
 }
 input::placeholder {
   font-size: 1.4rem;
@@ -95,4 +104,62 @@ input::placeholder {
 }
 .footer__img img {
   margin: 0.4rem;
+}
+.list {
+  list-style: none;
+  font-style: normal;
+}
+.hero__img {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .inner__container {
+    padding: 0 15rem 0 15rem;
+  }
+  .btn {
+    text-align: center;
+    padding: 2rem;
+  }
+  .hero__container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 14rem;
+  }
+  .hero__img {
+    display: block;
+    width: 400px;
+  }
+  .hero__header p {
+    padding: 1rem 0rem 1rem 0rem;
+  }
+  .hero__header h1 {
+    font-size: 3.5rem;
+    text-align: left;
+  }
+  .hero__content p {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+  input {
+    width: 50%;
+    margin-left: 0;
+    margin-bottom: 4rem;
+  }
+  .input-btn {
+    width: auto;
+    padding: 1.3rem;
+  }
+  .footer {
+    padding-bottom: 5rem;
+  }
+  .logo img {
+    position: relative;
+    right: 14rem;
+  }
 }
